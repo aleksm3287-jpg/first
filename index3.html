@@ -4,38 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>СибУют</title>
 </head>
 <body>
 <main>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="index2.html">Экспертиза</a></li>
-                <li><a href="index3.html">Процесс работы</a></li>
-            </ul>
-        </nav>
-        <h1>Процесс работы</h1>
-    </header>
+        <header>
+            <nav>
+                <img class="logo" src="./img/logo.png" alt="">
+                <ul >
+                    <li ><a href="index.html">Главная</a></li>
+                    <li><a href="index2.html">Экспертиза</a></li>
+                    <li><a href="index3.html">Процесс работы</a></li>
+                </ul>
+                <button class="call" onclick="openPopup()">Позвонить</button>
+            </nav>
+            
+        </header>
+        <div class="container">
+            <h1 class="title">Мы берем на себя полный цикл работ:</h1>
 
-    <h2>Мы берем на себя полный цикл работ:</h2>
+            <section>
+                <div class="card-3">
+                    <img class="pic-3" src="./img/geolog is.png" alt="">
+                    <div class="text">
+                        <h2 class="sub-title">Начало</h2>
+                        
+                        <p class="description">Перед началом проектирования и строительства мы проводим геологические изыскания на участке, чтобы точно определить характеристики грунта и выбрать правильный тип фундамента. Это важный этап, от которого напрямую зависят надежность, долговечность и безопасность будущего дома.</p>
+                    </div>
+                
+                </div>
 
-    <h3>·Проводим геологические изыскания на участке для выбора правильного типа фундамента.</h3>
-    <p></p>
-    <h3>·Изготовление панелей</h3>
-    <h3>· Доставка и монтаж с использованием автокрана.</h3>
 
-    <h3>· Устройство фундамента, монтаж кровли и установка оконных конструкций.</h3>
+                <div class="card-3">
+                    <img class="pic-3" src="./img/plit.png" alt="">
+                    <div class="text">
+                        <h2 class="sub-title">Изготовление стен</h2>
+                        
+                        <p class="description">После утверждения проекта начинается изготовление стеновых панелей в заводских условиях. Каждая панель производится по точным проектным размерам с учетом архитектуры дома, расположения оконных и дверных проемов, закладных элементов и каналов для инженерных коммуникаций.</p>
+                    </div>
+                    
+                </div>
 
-    <h2>Результат</h2> 
-    <p>Вы получаете капитальный, теплый и архитектурно выразительный дом с идеально ровными стенами и готовыми инженерными трассами внутри конструкций, возведенный с учетом всех особенностей вашего участка. Готов для круглогодичного проживания, без задержек и непредвиденных расходов.</p>
+
+                <div class="card-3">
+                    <img class="pic-3" src="./img/dostawka.png" alt="">
+                    <div class="text">
+                        <h2 class="sub-title">Доставка</h2>
+                        
+                        <p class="description">Готовые железобетонные панели доставляются на участок специализированным транспортом в соответствии с заранее разработанной логистикой. Мы планируем маршрут, очередность поставки и размещение элементов на площадке так, чтобы монтаж проходил быстро, безопасно и без простоев.</p>
+                    </div>
+                    
+                </div>
+
+
+                <div class="card-3">
+                    <img class="pic-3" src="./img/ystr fund.png" alt="">
+                    <div class="text">
+                        <h2 class="sub-title">Устройство фундамента</h2>
+                        
+                        <p class="description">После проведения геологических изысканий и подготовки участка мы выполняем устройство фундамента, подобранного под конкретный тип грунта, вес будущего дома и конструктивные особенности проекта. Грамотно рассчитанное основание обеспечивает надежность здания, защищает его от просадок, деформаций и сезонных подвижек грунта.</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+
+            <section>
+                <h2 class="sub-title">Результат</h2> 
+                <p class="description">Вы получаете капитальный, теплый и архитектурно выразительный дом с идеально ровными стенами и готовыми инженерными трассами внутри конструкций, возведенный с учетом всех особенностей вашего участка. Готов для круглогодичного проживания, без задержек и непредвиденных расходов.</p>
+            </section>
+            
+               
+        </div>
+    
+    
+    
+    
 
 <footer>
-<aside>Закажите бесплатный расчет стоимости вашего будущего дома из трехслойных панелей!Пришлите планировку или выберите проект из нашего каталога.</aside>
-
+     © 2026  Сайт строительной компании 
 </footer>
     </main>
-    <a href="index.html">вернутся обратно</a>
+
+     <!-- модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <button onclick="closePopup()">X</button>
+            <span class="modal-title" >
+            Оставьте заявку и получите расчет стоимость макета
+            в течение 30 минут
+            </span>
+            <form action="#" class="hero-form">
+            <input type="text" name="username" class="form hero-form__input" placeholder="Ваше имя">
+            <input type="text" name="phone" class="form hero-form__input phone" placeholder="Контактный телефон">
+            <input type="text" name="email" class="form hero-form__input" placeholder="Электронная почта">
+            <button class="call-me"> Оставить заявку</button>
+            </form>    
+        </div>
+  </div>
+
+    <script>
+        function closePopup() {
+            var modal = document.querySelector('.modal');
+            modal.style.display = 'none';
+        }
+
+        function openPopup() {
+            var modal = document.querySelector('.modal');
+            modal.style.display = 'block';
+        }
+    </script>
+
 </body>
 </html>
